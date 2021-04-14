@@ -1,26 +1,55 @@
 package ALaCarte;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menukort {
     //For keeping track of current and old menus
     private String version;
-    private ArrayList<Vare> Menukort = new ArrayList<>();
+    private ArrayList<Vare> menukort = new ArrayList<>();
+    Scanner in = new Scanner(System.in);
 
+    public Menukort (String version){
+        this.version = version;
+    }
 
     //Methods
     //Add Pizza to menu
-    public void addPizza(String navn, int ID, double pris, String topping){
+    public void addPizza(){
+        System.out.println("Navn på vare: ");
+        String navn = in.nextLine();
+        System.out.println("VareID: ");
+        int ID = in.nextInt();
+        System.out.println("Pris på vare: ");
+        double pris = in.nextDouble();
+        System.out.println("Toppings: ");
+        String topping = in.nextLine();
+        in.nextLine();
+
+        System.out.println();
+        System.out.println("Pizza tilføjet til menukort.");
 
         Pizza tmpPizza = new Pizza(navn, ID, pris, topping);
-        Menukort.add(tmpPizza);
+        menukort.add(tmpPizza);
 
     }
     //Add Vare to menu
-    public void addVare(String navn, int ID, double pris){
+    public void addVare(){
+        System.out.println("Navn på vare: ");
+        String navn = in.nextLine();
+        System.out.println("VareID: ");
+        int ID = in.nextInt();
+        System.out.println("Pris på vare: ");
+        double pris = in.nextDouble();
+        in.nextLine();
+
+        System.out.println();
+        System.out.println("Vare tilføjet til menukort.");
 
         Vare tmpVare = new Vare(navn, ID, pris);
-        Menukort.add(tmpVare);
+        menukort.add(tmpVare);
+
     }
 
     //getPizza
