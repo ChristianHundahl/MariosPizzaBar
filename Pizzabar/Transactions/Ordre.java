@@ -12,8 +12,18 @@ public class Ordre {
         this.kommentar = kommentar;
         this.total = total;
     }
+    /*
+    public tilføjVare (){
+
+    }
+
+    public fjernVare () {
+
+    }
 
     public String tilføjKommentar() {
         return kommentar;
     }
+
+     */
 }
