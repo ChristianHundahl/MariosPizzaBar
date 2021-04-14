@@ -1,5 +1,4 @@
 package Transactions;
-import ALaCarte.Pizza;
 
 public class Ordre {
     private String kundenavn;
@@ -12,5 +11,17 @@ public class Ordre {
         this.afhentningstidspunkt = afhentningstidspunkt;
         this.kommentar = kommentar;
         this.total = total;
+    }
+
+    public tilføjVare (){
+
+    }
+
+    public fjernVare () {
+
+    }
+
+    public String tilføjKommentar() {
+        return kommentar;
     }
 }
