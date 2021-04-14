@@ -1,9 +1,9 @@
 package ALaCarte;
 
 public class Vare {
-    String navn;
-    int vareID;
-    double pris;
+    private String navn;
+    private int vareID;
+    private double pris;
 
     public Vare (String navn, int ID, double pris){
         this.navn = navn;
