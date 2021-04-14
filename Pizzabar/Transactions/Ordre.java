@@ -13,14 +13,6 @@ public class Ordre {
         this.total = total;
     }
 
-    public tilføjVare (){
-
-    }
-
-    public fjernVare () {
-
-    }
-
     public String tilføjKommentar() {
         return kommentar;
     }
