@@ -12,8 +12,9 @@ public class Ordreliste {
         System.out.println(orderList.toString());
     }
 
-    public void addOrder(){
-
+    public void addOrder(String kundenavn, String afhentningstidspunkt, String kommentar, double total){
+        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar, total);
+        orderList.add(tempOrdre);
     }
 
     public void removeOrder(){
