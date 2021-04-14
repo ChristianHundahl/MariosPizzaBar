@@ -1,4 +1,5 @@
 package ALaCarte;
 
-public class Pizza {
+public class Pizza extends Vare {
+    String topping;
 }
