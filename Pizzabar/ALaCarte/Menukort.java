@@ -56,6 +56,11 @@ public class Menukort {
 
     //getPizza
     //getVare
+    public Vare hentVareFraMenukort(){
+        System.out.println("Indtast varenummer: ");
+        int nummer = in.nextInt();
+        return menukort.get(nummer + 1);
+    }
 
     //visMenu
     public void visMenu(){
