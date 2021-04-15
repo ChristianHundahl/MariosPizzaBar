@@ -26,4 +26,8 @@ public class Ordre {
     }
 
      */
+    @Override
+    public String toString(){
+        return orderList.toString();
+    }
 }

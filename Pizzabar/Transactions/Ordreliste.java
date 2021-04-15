@@ -4,10 +4,6 @@ import java.util.ArrayList;
 public class Ordreliste {
     ArrayList<Ordre> orderList = new ArrayList<Ordre>();
 
-    @Override
-    public String toString(){
-        return orderList.toString();
-    }
     public void showList(){
         System.out.println(orderList.toString());
     }
