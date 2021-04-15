@@ -17,7 +17,7 @@ public class Ordre {
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total/*ArrayList<Vare> indhold*/) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
-        this.kommentar = kommentar;
+        this.kommentar = tilføjKommentar();
         this.total = total;
         //this.indhold = indhold;
         id = idCounter +1;
@@ -34,11 +34,13 @@ public class Ordre {
     public void fjernVare () {
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
         id = in.nextInt();
-        Vare sletOrdre = indhold.remove(id); //Removes index (id) from list
+        indhold.remove(id); //Removes index (id) from list
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
     public String tilføjKommentar() {
+        System.out.println("Skriv en kommentar til ordren: ");
+        String kommentar = in.nextLine();
         return kommentar;
     }
 
