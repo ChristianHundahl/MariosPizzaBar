@@ -31,6 +31,11 @@ public class Ordreliste {
     }
 
     public void removeOrder(){
+        Ordre sletOrdre = new Ordre("Geo Geoløs", "14:45", "Tester",52);
+
+        System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
+        String id = in.nextLine();
+
 
     }
 
