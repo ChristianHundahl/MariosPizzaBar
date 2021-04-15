@@ -51,7 +51,9 @@ public class Menukort {
 
     }
 
-    //Sort by vareID - add method after each method
+    //Sortér menukort - add method after each method
+
+
     //Remove item by index - 1
     public void fjernVareFraMenukort(int nummer){
         menukort.remove(nummer - 1);
