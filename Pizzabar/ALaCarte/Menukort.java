@@ -60,6 +60,7 @@ public class Menukort {
     //visMenu
     public void visMenu(){
         int i = 1;
+        System.out.println("Menukort:");
         for (Vare item : menukort){
             System.out.println( i + " " + item.getMenuInfo() + " - " + item.getPris() + " kr.");
             i++;
