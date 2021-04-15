@@ -22,9 +22,9 @@ public class Menukort {
         int ID = in.nextInt();
         System.out.println("Pris på vare: ");
         double pris = in.nextDouble();
+        in.nextLine();
         System.out.println("Toppings: ");
         String topping = in.nextLine();
-        in.nextLine();
 
         System.out.println();
         System.out.println("Pizza tilføjet til menukort.");
@@ -71,7 +71,7 @@ class test{
     public static void main(String [] args){
         Menukort v1 = new Menukort("v1");
         v1.addPizza();
-        //v1.addVare();
+        v1.addVare();
         v1.visMenu();
     }
 }
