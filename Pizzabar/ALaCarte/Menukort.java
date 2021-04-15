@@ -56,4 +56,12 @@ public class Menukort {
 
     //getPizza
     //getVare
+
+    //visMenu
+    public void visMenu(){
+        int i = 1;
+        for (Vare item : menukort){
+            System.out.println( i + " " + item);
+        }
+    }
 }
