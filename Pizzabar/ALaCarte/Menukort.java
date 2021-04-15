@@ -7,7 +7,7 @@ public class Menukort {
     //For keeping track of current and old menus
     private String version;
     private ArrayList<Vare> menukort = new ArrayList<>();
-    Scanner in = new Scanner(System.in);
+    private Scanner in = new Scanner(System.in);
 
     public Menukort (String version){
         this.version = version;
@@ -52,12 +52,15 @@ public class Menukort {
     }
 
     //Sort by vareID - add method after each method
-    //Remove item
+    //Remove item by index - 1
+    public void fjernVareFraMenukort(int nummer){
+        menukort.remove(nummer - 1);
+    }
 
-    //getPizza
-    //getVare
+
+    //getVare by index - 1
     public Vare hentVareFraMenukort(int nummer){
-        return menukort.get(nummer + 1);
+        return menukort.get(nummer - 1);
     }
 
     //visMenu
