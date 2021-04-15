@@ -48,6 +48,10 @@ public class Ordre {
 
     @Override
     public String toString(){
-        return indhold.toString();
+        String finalOrdre =
+                "Kunde: " + kundenavn +
+                "\n Afhentning: " + afhentningstidspunkt +
+                "\n Kommentar: " + kommentar;
+        return finalOrdre;
     }
 }
