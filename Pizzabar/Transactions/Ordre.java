@@ -9,6 +9,8 @@ public class Ordre {
     private String afhentningstidspunkt;
     private String kommentar;
     private double total;
+    private int id;
+    private int idCounter;
     private ArrayList<Vare> indhold = new ArrayList<>();
 
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total) {
@@ -16,6 +18,8 @@ public class Ordre {
         this.afhentningstidspunkt = afhentningstidspunkt;
         this.kommentar = kommentar;
         this.total = total;
+        id = idCounter +1;
+        idCounter++;
     }
     /*
     public tilføjVare (){
