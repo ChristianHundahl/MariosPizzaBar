@@ -37,7 +37,6 @@ public class Ordreliste {
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
-
     //ArrayList w/ ordrerlist
     //getOrder()
 
