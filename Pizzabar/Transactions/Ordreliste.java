@@ -1,5 +1,4 @@
 package Transactions;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -28,7 +27,7 @@ public class Ordreliste {
         Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar, total);
         ordreList.add(tempOrdre);
     }
-
+    //Method to remove order from list
     public void removeOrder(){
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
         int id = in.nextInt();
@@ -39,6 +38,6 @@ public class Ordreliste {
 
     //ArrayList w/ ordrerlist
     //getOrder()
-    //removeOrder()
+
     //showList();
 }

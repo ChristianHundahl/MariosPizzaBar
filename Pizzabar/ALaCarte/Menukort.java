@@ -65,6 +65,10 @@ public class Menukort {
             i++;
         }
     }
+
+    public ArrayList<Vare> getMenukort() {
+        return menukort;
+    }
 }
 
 class test{

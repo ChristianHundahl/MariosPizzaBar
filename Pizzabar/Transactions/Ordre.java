@@ -1,6 +1,6 @@
 package Transactions;
-
-import ALaCarte.Vare;
+import java.util.Scanner;
+import ALaCarte.*;
 
 import java.util.ArrayList;
 
@@ -11,23 +11,31 @@ public class Ordre {
     private double total;
     private int id;
     private int idCounter;
+    Scanner in = new Scanner(System.in);
     private ArrayList<Vare> indhold = new ArrayList<>();
 
-    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total) {
+    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total/*ArrayList<Vare> indhold*/) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
         this.kommentar = kommentar;
         this.total = total;
+        //this.indhold = indhold;
         id = idCounter +1;
         idCounter++;
     }
-    /*
-    public tilføjVare (){
 
+    public void tilføjVare (){
+        System.out.println("Tilføj varer til ordren: ");
+        int id = in.nextInt();
+        Menukort m = new Menukort("v1");
+        indhold.add(m.getMenukort().get(id));
     }
 
-    public fjernVare () {
-
+    public void fjernVare () {
+        System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
+        id = in.nextInt();
+        Vare sletOrdre = indhold.remove(id); //Removes index (id) from list
+        System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
     public String tilføjKommentar() {
@@ -37,6 +45,6 @@ public class Ordre {
 
     @Override
     public String toString(){
-        return orderList.toString();
-    }*/
+        return indhold.toString();
+    }
 }
