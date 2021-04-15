@@ -7,4 +7,13 @@ public class Pizza extends Vare {
         super(navn,ID,pris);
         this.topping = topping;
     }
+
+    public String getTopping() {
+        return topping;
+    }
+
+    @Override
+    public String getMenuInfo() {
+        return (super.getMenuInfo() + ", " + getTopping());
+    }
 }

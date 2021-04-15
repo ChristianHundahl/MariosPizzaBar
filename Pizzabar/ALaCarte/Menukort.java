@@ -61,7 +61,17 @@ public class Menukort {
     public void visMenu(){
         int i = 1;
         for (Vare item : menukort){
-            System.out.println( i + " " + item);
+            System.out.println( i + " " + item.getMenuInfo() + " - " + item.getPris() + " kr.");
+            i++;
         }
+    }
+}
+
+class test{
+    public static void main(String [] args){
+        Menukort v1 = new Menukort("v1");
+        v1.addPizza();
+        //v1.addVare();
+        v1.visMenu();
     }
 }

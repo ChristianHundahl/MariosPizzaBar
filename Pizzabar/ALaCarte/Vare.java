@@ -10,4 +10,12 @@ public class Vare {
         this.vareID = ID;
         this.pris = pris;
     }
+
+    public String getMenuInfo(){
+        return navn;
+    }
+
+    public double getPris() {
+        return pris;
+    }
 }
