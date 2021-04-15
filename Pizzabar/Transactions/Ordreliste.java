@@ -19,14 +19,11 @@ public class Ordreliste {
         String afhentningstidspunkt = in.nextLine();
         System.out.println("Kommentar: ");
         String kommentar = in.nextLine();
-        System.out.println("Total: "); //TODO automatisk total
-        double total = in.nextDouble();
-        in.nextLine();
 
         System.out.println();
         System.out.println("Ordren er tilføjet.");
 
-        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar, total);
+        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar);
         ordreList.add(tempOrdre);
     }
     //Method to remove order from list

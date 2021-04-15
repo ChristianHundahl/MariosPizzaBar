@@ -17,11 +17,11 @@ public class Ordre {
     private ArrayList<Vare> indhold = new ArrayList<>();
 
     //Constructor Ordre
-    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total) {
+    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
         //this.kommentar = kommentar;
-        this.total = total;
+
         id = idCounter +1;
         idCounter++;
     }
@@ -39,18 +39,29 @@ public class Ordre {
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
+    public void udregnTotal(){
+        this.total = 0;
+        for (Vare item : indhold){
+            total += item.getPris();
+        }
+    }
+
     /*public String tilføjKommentar() { //Overflødig?
         System.out.println("Skriv en kommentar til ordren: ");
         String kommentar = in.nextLine();
         return kommentar;
     }*/
 
+    public double getTotal() {
+        return total;
+    }
 
     @Override
     public String toString(){
         String finalOrdre =
                 "Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
+                "\n Total: " + total +
                 "\n Kommentar: " + kommentar;
         return finalOrdre;
     }
