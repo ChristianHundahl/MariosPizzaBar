@@ -51,6 +51,9 @@ public class Menukort {
 
     }
 
+    //Sort by vareID - add method after each method
+    //Remove item
+
     //getPizza
     //getVare
 }
