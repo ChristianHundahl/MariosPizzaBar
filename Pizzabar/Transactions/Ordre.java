@@ -5,6 +5,7 @@ import ALaCarte.*;
 import java.util.ArrayList;
 
 public class Ordre {
+    //Attributes for class Ordre
     private String kundenavn;
     private String afhentningstidspunkt;
     private String kommentar;
@@ -12,14 +13,15 @@ public class Ordre {
     private int id;
     private int idCounter;
     Scanner in = new Scanner(System.in);
+    private Menukort currentMenu = new Menukort("v1");
     private ArrayList<Vare> indhold = new ArrayList<>();
 
-    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total/*ArrayList<Vare> indhold*/) {
+    //Constructor Ordre
+    public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar, double total) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
-        this.kommentar = tilføjKommentar();
+        //this.kommentar = kommentar;
         this.total = total;
-        //this.indhold = indhold;
         id = idCounter +1;
         idCounter++;
     }
@@ -27,8 +29,7 @@ public class Ordre {
     public void tilføjVare (){
         System.out.println("Tilføj varer til ordren: ");
         int id = in.nextInt();
-        Menukort m = new Menukort("v1");
-        indhold.add(m.getMenukort().get(id));
+        currentMenu.hentVareFraMenukort(id);
     }
 
     public void fjernVare () {
@@ -38,11 +39,11 @@ public class Ordre {
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
-    public String tilføjKommentar() {
+    /*public String tilføjKommentar() { //Overflødig?
         System.out.println("Skriv en kommentar til ordren: ");
         String kommentar = in.nextLine();
         return kommentar;
-    }
+    }*/
 
 
     @Override
