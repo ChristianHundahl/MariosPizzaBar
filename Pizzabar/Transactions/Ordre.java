@@ -36,7 +36,7 @@ public class Ordre {
     public void fjernVare () {
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
         id = in.nextInt();
-        indhold.remove(id); //Removes index (id) from list
+        indhold.remove(id - 1); //Removes index (id) from list
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
 
