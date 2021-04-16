@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class Ordre {
     //Attributes for class Ordre
+    //TODO index errors
+    //TODO when getting object from Menukort.java use index no.
     private String kundenavn;
     private String afhentningstidspunkt;
     private String kommentar;
