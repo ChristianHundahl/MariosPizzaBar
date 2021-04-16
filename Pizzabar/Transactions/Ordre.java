@@ -20,8 +20,7 @@ public class Ordre {
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
-        //this.kommentar = kommentar;
-
+        this.kommentar = kommentar;
         id = idCounter +1;
         idCounter++;
     }
@@ -61,8 +60,10 @@ public class Ordre {
         String finalOrdre =
                 "Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
-                "\n Total: " + total +
-                "\n Kommentar: " + kommentar;
+                "\n Total: " + total;
+        if (kommentar != null) {
+            finalOrdre += "\n Kommentar: " + kommentar;
+        }
         return finalOrdre;
     }
 }

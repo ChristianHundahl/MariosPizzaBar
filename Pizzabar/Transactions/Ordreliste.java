@@ -19,7 +19,6 @@ public class Ordreliste {
         String afhentningstidspunkt = in.nextLine();
         System.out.println("Kommentar: ");
         String kommentar = in.nextLine();
-
         System.out.println();
         System.out.println("Ordren er tilføjet.");
 
