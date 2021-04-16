@@ -63,7 +63,7 @@ public class Ordre {
                 "Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
                 "\n Total: " + total;
-        if (kommentar.contains("[a-zA-Z]+")) {
+        if (kommentar.matches("[a-zA-Z]+")) {
             finalOrdre += "\n Kommentar: " + kommentar;
         }
         return finalOrdre;
