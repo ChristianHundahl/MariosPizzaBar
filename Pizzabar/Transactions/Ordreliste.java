@@ -23,7 +23,7 @@ public class Ordreliste {
         System.out.println();
         System.out.println("Ordren er tilføjet.");
 
-        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar);
+        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar); //tempOrdre skiftes til nyOrdre?
         ordreList.add(tempOrdre);
     }
     //Method to remove order from list before completion (sale)
@@ -35,7 +35,7 @@ public class Ordreliste {
     }
     //Remove finished ordre from list of active ordres after sale, while saving ordre details for statistical purposes
     public void ordreAfhentet(){
-        System.out.println("Hvilken ordre er afsluttet (ID): ");
+        System.out.println("Hvilken ordre er afhentet (ID): ");
         int id = in.nextInt();
         Ordre afhentet = ordreList.remove(id - 1); //Removes index (input -1) from list
         statistik.add(afhentet);
