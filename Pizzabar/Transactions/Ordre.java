@@ -47,12 +47,6 @@ public class Ordre {
         }
     }
 
-    /*public String tilføjKommentar() { //Overflødig?
-        System.out.println("Skriv en kommentar til ordren: ");
-        String kommentar = in.nextLine();
-        return kommentar;
-    }*/
-
     public double getTotal() {
         return total;
     }
@@ -63,7 +57,7 @@ public class Ordre {
                 "Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
                 "\n Total: " + total;
-        if (kommentar.matches("[a-zA-Z]+")) {
+        if (kommentar.matches("[a-zA-Z]+")) { //Comment is added if in.nextLine contains characters a to z
             finalOrdre += "\n Kommentar: " + kommentar;
         }
         return finalOrdre;

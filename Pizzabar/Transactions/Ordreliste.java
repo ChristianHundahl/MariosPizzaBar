@@ -16,14 +16,16 @@ public class Ordreliste {
     public void addOrder(){
         System.out.println("Kundenavn: ");
         String kundenavn = in.nextLine();
-        System.out.println("Afhentningstidspunkt: ");
-        String afhentningstidspunkt = in.nextLine();
+        System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
+        String klokkeslæt = in.nextLine();
+        StringBuilder afhentningstidspunkt = new StringBuilder(klokkeslæt);
+        afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkesløt
         System.out.println("Kommentar: ");
         String kommentar = in.nextLine();
         System.out.println();
         System.out.println("Ordren er tilføjet.");
 
-        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt, kommentar); //tempOrdre skiftes til nyOrdre?
+        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
         ordreList.add(tempOrdre);
     }
     //Method to remove order from list before completion (sale)
