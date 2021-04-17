@@ -50,14 +50,13 @@ public class Menukort {
         menukort.add(tmpVare);
     }
 
-    //Sortér menukort - add method after each method TODO If/else statement virker ikke!!!
+    //Sortér menukort - add method after each method
     public void sortMenukort(){
         ArrayList<Vare> tmpPizza = new ArrayList<>();
         ArrayList<Vare> tmpAndet = new ArrayList<>();
 
-        int i = 0;
         for (Vare item : menukort){
-            if(menukort.get(i).getType().equals("pizza")){
+            if(item.getType().equals("pizza")){
                 tmpPizza.add(item);
             }
             else{
@@ -70,13 +69,13 @@ public class Menukort {
         for (Vare andet : tmpAndet){
             tmpAndet = sortByPris(tmpAndet);
         }
-        //For testing purposes TODO delete afterwards
-        System.out.println(tmpPizza.toString());
-        System.out.println(tmpAndet.toString());
+
+        //TODO finish method - add the tmpLists to a finished list
 
 
     }
-    //Sorts the methods by price todo!!!
+
+    //Sorts the methods by price
     public ArrayList<Vare> sortByPris(ArrayList<Vare> array){
         Vare temp;
         boolean sorted = false;
@@ -130,8 +129,6 @@ class test{
         v1.addPizza();
         v1.addVare();
         v1.visMenu();
-        System.out.println(v1.getMenukort().get(0).getType().equals("pizza"));
-        System.out.println(v1.getMenukort().get(1).getType().equals("pizza"));
         v1.sortMenukort();
 
     }

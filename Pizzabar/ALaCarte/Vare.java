@@ -28,7 +28,7 @@ public class Vare {
         this.vareID = vareID;
     }
 
-    //Compare to method TODO IDKDDK
+    //Compare to method
     public int compareTo (Vare vare){
         int res = 0;
         if (this.pris < vare.getPris()){
