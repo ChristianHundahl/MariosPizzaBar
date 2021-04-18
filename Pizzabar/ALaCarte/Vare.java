@@ -28,6 +28,10 @@ public class Vare {
         this.vareID = vareID;
     }
 
+    public int getVareID() {
+        return vareID;
+    }
+
     //Compare to method
     public int compareTo (Vare vare){
         int res = 0;
