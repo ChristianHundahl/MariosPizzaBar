@@ -9,6 +9,8 @@ public class Ordreliste {
     private ArrayList<Ordre> statistik = new ArrayList<Ordre>();
     private Scanner in = new Scanner(System.in);
 
+    String errorTest = "VIRKER DET MON NU?";
+
     public void showList(){
         System.out.println(ordreList.toString());
     }
