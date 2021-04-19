@@ -27,9 +27,9 @@ public class Ordre {
         idCounter++;
     }
 
-    public void tilføjVare (){
+    public void tilføjVare (int id){
         System.out.println("Tilføj varer til ordren: ");
-        int id = in.nextInt();
+        this.id = id;
         currentMenu.hentVareFraMenukort(id);
     }
 
