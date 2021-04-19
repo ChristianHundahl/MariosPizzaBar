@@ -50,11 +50,12 @@ public class Menukort {
         menukort.add(tmpVare);
     }
 
-    //Sortér menukort - add method after each method
+    //Sortér menukort by category and price
     public void sortMenukort(){
         ArrayList<Vare> tmpPizza = new ArrayList<>();
         ArrayList<Vare> tmpAndet = new ArrayList<>();
 
+        //Seperates the two categories
         for (Vare item : menukort){
             if(item.getType().equals("pizza")){
                 tmpPizza.add(item);
@@ -63,6 +64,11 @@ public class Menukort {
                 tmpAndet.add(item);
             }
         }
+        //Clears the menukortArrayList
+        menukort.clear();
+
+
+        //Sorts the two tmpArrayList by price
         for (Vare pizza : tmpPizza){
             tmpPizza = sortByPris(tmpPizza);
         }
@@ -70,12 +76,20 @@ public class Menukort {
             tmpAndet = sortByPris(tmpAndet);
         }
 
-        //TODO finish method - add the tmpLists to a finished list
+        //Adds the the items back on the menukortArrayList sorted by type and price
+        for (Vare item : tmpPizza){
+            menukort.add(item);
+        }
+        for (Vare item : tmpAndet){
+            menukort.add(item);
+        }
 
-
+        for (Vare item : menukort){
+            item.setVareID(getMenukort().indexOf(item)+1);
+        }
     }
 
-    //Sorts the methods by price
+    //Sorts the arrayList by price
     public ArrayList<Vare> sortByPris(ArrayList<Vare> array){
         Vare temp;
         boolean sorted = false;
@@ -109,7 +123,7 @@ public class Menukort {
     }
 
     //visMenu
-    public void visMenu(){
+    public void visMenukort(){
         int i = 1;
         System.out.println("Menukort:");
         for (Vare item : menukort){
@@ -127,9 +141,12 @@ class test{
     public static void main(String [] args){
         Menukort v1 = new Menukort("v1");
         v1.addPizza();
+        v1.addPizza();
+        v1.addPizza();
         v1.addVare();
-        v1.visMenu();
-        v1.sortMenukort();
+        v1.addVare();
 
+        v1.sortMenukort();
+        v1.visMenukort();
     }
 }
