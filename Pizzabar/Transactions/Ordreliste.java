@@ -30,25 +30,23 @@ public class Ordreliste {
     //Method to remove order from list before completion (sale)
     public void removeOrder(){
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
-        int id = in.nextInt();
-        ordreList.remove(id + 1); //Removes index (input) from list
+        int id = in.nextInt() + 1;
+        ordreList.remove(id); //Removes index (input) from list
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
     //Remove finished ordre from list of active ordres after sale, while saving ordre details for statistical purposes
     public void ordreAfhentet(){
         System.out.println("Hvilken ordre er afhentet (ID): ");
-        int id = in.nextInt();
-        statistik.get(ordreList.indexOf(id +1));
-        ordreList.remove(id + 1); //Removes index (input) from list
+        int id = in.nextInt() + 1;
+        statistik.add(ordreList.get(id));
+        ordreList.remove(id); //Removes index (input) from list
     }
-
+    //manageOrder
     public void manageOrdre(){
         System.out.println("Hvilken ordre skal ændres (ID): ");
-        int id = in.nextInt();
-        ordreList.get(ordreList.indexOf(id));
+        int id = in.nextInt() + 1;
+        ordreList.get(id);
     }
-
-    //manageOrder
 
     //ArrayList w/ ordrerlist
     //getOrder()
