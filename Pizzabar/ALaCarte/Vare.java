@@ -6,9 +6,19 @@ public class Vare {
     private double pris;
     private String type = "andet";
 
+    public Vare(){}
+
     public Vare (String navn, double pris){
         this.navn = navn;
         //this.vareID = ID;
+        this.pris = pris;
+    }
+
+    public void setNavn(String navn) {
+        this.navn = navn;
+    }
+
+    public void setPris(double pris) {
         this.pris = pris;
     }
 

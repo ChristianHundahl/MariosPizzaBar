@@ -1,6 +1,7 @@
 package UI;
 
-import ALaCarte.*;
+import Transactions.Ordreliste;
+
 import java.util.Scanner;
 
 public class Menu {
@@ -11,58 +12,52 @@ public class Menu {
      */
 
     private Scanner input = new Scanner(System.in);
-    private Menukort menukort = new Menukort("v0");
+    private final Ordreliste ordreliste;
+
+    public Menu(Ordreliste ordreliste){
+        this.ordreliste = ordreliste;
+    }
 
 
     //Prints main menu
     public void mainMenu(){
         System.out.println("Main menu");
         System.out.println("1. Lav ny ordre");
-        System.out.println("2. Manage order");
+        System.out.println("2. Manage ordre");
         System.out.println("3. Redigere menukort");
         System.out.println("4. Exit program");
         System.out.println("Enter choice: ");
     }
 
     //Prints new order menu if chosen
-    public void newOrderMenu(){
-        while(true) {
+    public void newOrder(){
             System.out.println("New order menu");
             System.out.println("1. Tilføj pizza");
-            System.out.println("2. Tilføj andre vare");
-            System.out.println("3. Gå tilbage main menu");
+            System.out.println("2. Gå tilbage main menu");
             System.out.println("Enter choice: ");
-
-            switch (getMenuChoice()){
-                case 1:
-                    System.out.println("Pizza tilføjet");
-                    menukort.addPizza();
-                    break;
-                case 2:
-                    System.out.println("Sodavand tilføjet");
-                    menukort.addVare();
-                    break;
-                case 3:
-                    return;
-                default:
-                    break;
-            }
-        }
     }
 
 
     //If manage order is chosen show this menu
-    public void manageMenu(){
-            System.out.println("Select the order you want to manage");
-            //prints orderlist here
+    public void manageOrdre(){
+            System.out.println("Vælg en ordre at redigere");
+            ordreliste.showList();
             System.out.println("Enter choice: ");
-            //Get order from orderlist
     }
 
     public void editMenuCard(){
+        System.out.println("Hvordan ønsker du at redigere menukort");
         System.out.println("1. Tilføj ny vare til menukort");
         System.out.println("2. Fjern vare fra menu kort");
+        System.out.println("3. Gå tilbage");
 
+    }
+
+    public void pizzaEllerVare(){
+        System.out.println("Hvad ønsker du at tilføje til menukort");
+        System.out.println("1. Tilføj pizza til menukort");
+        System.out.println("2. Tilføj vare til menukort");
+        System.out.println("3. Gå tilbage");
     }
 
 
@@ -77,7 +72,5 @@ public class Menu {
         choice = input.nextInt();
         return choice;
     }
-
-
 
 }
