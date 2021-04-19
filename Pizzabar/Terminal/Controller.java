@@ -6,8 +6,6 @@ import ALaCarte.Vare;
 import Transactions.Ordreliste;
 import UI.Menu;
 
-import javax.sound.midi.Soundbank;
-import java.sql.Struct;
 import java.util.Scanner;
 
 public class Controller {
@@ -78,7 +76,6 @@ public class Controller {
                     pizzaEllerVare();
                     break;
                 case 2:
-
                     break;
                 case 3:
                     return;
@@ -125,8 +122,6 @@ public class Controller {
             }
         }
     }
-
-
 
 }
 
