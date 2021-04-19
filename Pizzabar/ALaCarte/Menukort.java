@@ -15,14 +15,14 @@ public class Menukort {
 
     //Methods
     //Add Pizza to menu
-    public void addPizza(String navn, double pris, String topping){
-        Pizza tmpPizza = new Pizza(navn, pris, topping);
-        menukort.add(tmpPizza);
+    public void addPizza(Pizza pizza){
+        Pizza tmpPizza = new Pizza();
+        menukort.add(pizza);
     }
     //Add Vare to menu
-    public void addVare(String navn, double pris){
-        Vare tmpVare = new Vare(navn, pris);
-        menukort.add(tmpVare);
+    public void addVare(Vare vare){
+        Vare tmpVare = new Vare();
+        menukort.add(vare);
     }
 
     //Sortér menukort by category and price
