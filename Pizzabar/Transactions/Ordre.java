@@ -54,7 +54,7 @@ public class Ordre {
     @Override
     public String toString(){
         String finalOrdre =
-                "Kunde: " + kundenavn +
+                "\n Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
                 "\n Total: " + total;
         if (kommentar.matches("[a-zA-Z]+")) { //Comment is added if in.nextLine contains characters a to z
