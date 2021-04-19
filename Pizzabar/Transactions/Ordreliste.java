@@ -13,8 +13,9 @@ public class Ordreliste {
         System.out.println(ordreList.toString());
     }
 
-    public void addOrder(){
-        System.out.println("Kundenavn: ");
+    //Tager en ordre som input og tilføjer den til listen
+    public void addOrder(Ordre ordre){
+       /* System.out.println("Kundenavn: ");
         String kundenavn = in.nextLine();
         System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
         String klokkeslæt = in.nextLine();
@@ -25,7 +26,9 @@ public class Ordreliste {
         System.out.println("\nOrdren er tilføjet.");
 
         Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
-        ordreList.add(tempOrdre);
+
+        */
+        ordreList.add(ordre);
     }
     //Method to remove order from list before completion (sale)
     public void removeOrder(){

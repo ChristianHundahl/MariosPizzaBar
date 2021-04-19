@@ -19,6 +19,10 @@ public class Ordre {
     private ArrayList<Vare> indhold = new ArrayList<>();
 
     //Constructor Ordre
+    /*
+    Empty ordre så kan man ved brug af setter og getters selv andgive attributter
+    pulic Ordre(){}
+     */
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
@@ -29,8 +33,8 @@ public class Ordre {
 
     public void tilføjVare (int id){
         System.out.println("Tilføj varer til ordren: ");
-        this.id = id;
-        currentMenu.hentVareFraMenukort(id);
+        //this.id = id; Skal ikke ændre ordre ID
+        indhold.add(currentMenu.hentVareFraMenukort(id));
     }
 
     public void fjernVare () {

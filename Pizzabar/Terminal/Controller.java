@@ -3,6 +3,7 @@ package Terminal;
 import ALaCarte.Menukort;
 import ALaCarte.Pizza;
 import ALaCarte.Vare;
+import Transactions.Ordre;
 import Transactions.Ordreliste;
 import UI.Menu;
 
@@ -15,7 +16,19 @@ public class Controller {
     Scanner input = new Scanner(System.in);
 
 
-    public Controller() { }
+
+    public Controller() {
+        Pizza p2 = new Pizza("Hawaii",65.00,"Ananas");
+        Pizza p3 = new Pizza("Skinke",65.00,"Skinke");
+        Pizza p4 = new Pizza("Kebab",65.00,"Kebab og løg");
+        Vare v2 = new Vare("Is",18.00);
+        Vare v3 = new Vare("Sodavand 1.5l", 25.00);
+        menukort.addPizza(p2);
+        menukort.addPizza(p3);
+        menukort.addPizza(p4);
+        menukort.addVare(v2);
+        menukort.addVare(v3);
+    }
 
     public void menuOptions() {
         int choice = 0;
@@ -48,7 +61,8 @@ public class Controller {
             choice = menu.getMenuChoice();
             switch (choice) {
                 case 1:
-                    ordreliste.addOrder();
+                    Ordre ordre = new Ordre();
+                    ordreliste.addOrder(ordre);//Tager en ordre og tilføjer den til ordrelisten
                     break;
                 case 2:
                     return;
@@ -63,6 +77,7 @@ public class Controller {
         while(true){
             menu.manageOrdre();
             choice = menu.getMenuChoice();
+            ordreliste.manageOrdre();
         }
     }
 
@@ -76,6 +91,7 @@ public class Controller {
                     pizzaEllerVare();
                     break;
                 case 2:
+                    fjernFraKort();
                     break;
                 case 3:
                     return;
@@ -120,6 +136,17 @@ public class Controller {
                 default:
                     break;
             }
+        }
+    }
+
+    public void fjernFraKort(){
+        int choice = 0;
+        while (true){
+            menukort.visMenukort();
+            choice = menu.getMenuChoice();
+            menukort.fjernVareFraMenukort(choice);
+            menukort.sortMenukort();
+            return;
         }
     }
 
