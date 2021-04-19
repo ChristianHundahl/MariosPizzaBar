@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ordreliste {
     private ArrayList<Ordre> ordreList = new ArrayList<Ordre>();
-    private ArrayList<Ordre> statistik = new ArrayList<Ordre>();
+    private ArrayList<Ordre> statistik = new ArrayList<Ordre>(ordreList.subList(0, ordreList.size()));
     private Scanner in = new Scanner(System.in);
 
     public void showList(){
@@ -31,17 +31,23 @@ public class Ordreliste {
     public void removeOrder(){
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
         int id = in.nextInt();
-        Ordre sletOrdre = ordreList.remove(id - 1); //Removes index (input -1) from list
+        ordreList.remove(id + 1); //Removes index (input -1) from list
         System.out.println("Ordre id " + id + " er fjernet fra listen");
     }
     //Remove finished ordre from list of active ordres after sale, while saving ordre details for statistical purposes
     public void ordreAfhentet(){
         System.out.println("Hvilken ordre er afhentet (ID): ");
         int id = in.nextInt();
-        Ordre afhentet = ordreList.remove(id - 1); //Removes index (input -1) from list
-        statistik.add(afhentet);
-        System.out.println("Ordre id " + id + " er afhentet");
+        ordreList.remove(id + 1); //Removes index (input -1) from list
     }
+
+    public void manageOrdre(){
+        System.out.println("Hvilken ordre skal ændres (ID): ");
+        int id = in.nextInt();
+        ordreList.get(ordreList.indexOf(id));
+    }
+
+    //manageOrder
 
     //ArrayList w/ ordrerlist
     //getOrder()
