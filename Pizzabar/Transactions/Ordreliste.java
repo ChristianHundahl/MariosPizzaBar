@@ -19,7 +19,7 @@ public class Ordreliste {
         System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
         String klokkeslæt = in.nextLine();
         StringBuilder afhentningstidspunkt = new StringBuilder(klokkeslæt);
-        afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkesløt
+        afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkeslæt
         System.out.println("Kommentar: ");
         String kommentar = in.nextLine();
         System.out.println("\nOrdren er tilføjet.");
@@ -30,29 +30,35 @@ public class Ordreliste {
     //Method to remove order from list before completion (sale)
     public void removeOrder(){
         System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
-        int id = in.nextInt() + 1;
+        int id = in.nextInt() - 1;
         ordreList.remove(id); //Removes index (input) from list
-        System.out.println("Ordre id " + id + " er fjernet fra listen");
+        System.out.println("Ordre id " + (id + 1) + " er fjernet fra listen");
     }
     //Remove finished ordre from list of active ordres after sale, while saving ordre details for statistical purposes
     public void ordreAfhentet(){
         System.out.println("Hvilken ordre er afhentet (ID): ");
-        int id = in.nextInt() + 1;
+        int id = in.nextInt() - 1;
         statistik.add(ordreList.get(id));
         ordreList.remove(id); //Removes index (input) from list
     }
     //manageOrder
     public void manageOrdre(){
         System.out.println("Hvilken ordre skal ændres (ID): ");
-        int id = in.nextInt() + 1;
+        int id = in.nextInt() - 1;
         ordreList.get(id);
     }
 
     //ArrayList w/ ordrerlist
-    //getOrder()
+    //getOrderList()
+    public ArrayList<Ordre> getOrdreList() {
+        return ordreList;
+    }
 
     //showList();
-
+    public String showOrdreList(){
+        System.out.println(ordreList.toString());
+        return ordreList.toString();
+    }
 }
 
 class test{
