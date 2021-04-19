@@ -22,8 +22,7 @@ public class Ordreliste {
         afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkesløt
         System.out.println("Kommentar: ");
         String kommentar = in.nextLine();
-        System.out.println();
-        System.out.println("Ordren er tilføjet.");
+        System.out.println("\nOrdren er tilføjet.");
 
         Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
         ordreList.add(tempOrdre);
