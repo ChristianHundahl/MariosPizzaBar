@@ -15,37 +15,12 @@ public class Menukort {
 
     //Methods
     //Add Pizza to menu
-    public void addPizza(){
-        System.out.println("Navn på vare: ");
-        String navn = in.nextLine();
-        //System.out.println("VareID: ");
-        //int ID = in.nextInt();
-        System.out.println("Pris på vare: ");
-        double pris = in.nextDouble();
-        in.nextLine();
-        System.out.println("Toppings: ");
-        String topping = in.nextLine();
-
-        System.out.println();
-        System.out.println("Pizza tilføjet til menukort.");
-
+    public void addPizza(String navn, double pris, String topping){
         Pizza tmpPizza = new Pizza(navn, pris, topping);
         menukort.add(tmpPizza);
-
     }
     //Add Vare to menu
-    public void addVare(){
-        System.out.println("Navn på vare: ");
-        String navn = in.nextLine();
-        //System.out.println("VareID: ");
-        //int ID = in.nextInt();
-        System.out.println("Pris på vare: ");
-        double pris = in.nextDouble();
-        in.nextLine();
-
-        System.out.println();
-        System.out.println("Vare tilføjet til menukort.");
-
+    public void addVare(String navn, double pris){
         Vare tmpVare = new Vare(navn, pris);
         menukort.add(tmpVare);
     }
@@ -134,19 +109,5 @@ public class Menukort {
 
     public ArrayList<Vare> getMenukort() {
         return menukort;
-    }
-}
-
-class test{
-    public static void main(String [] args){
-        Menukort v1 = new Menukort("v1");
-        v1.addPizza();
-        v1.addPizza();
-        v1.addPizza();
-        v1.addVare();
-        v1.addVare();
-
-        v1.sortMenukort();
-        v1.visMenukort();
     }
 }
