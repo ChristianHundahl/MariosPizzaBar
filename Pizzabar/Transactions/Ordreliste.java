@@ -38,7 +38,7 @@ public class Ordreliste {
     public void ordreAfhentet(){
         System.out.println("Hvilken ordre er afhentet (ID): ");
         int id = in.nextInt() - 1;
-        statistik.add(ordreList.get(id));
+        statistik.add(ordreList.get(id)); //Ordre is added to list 'statistik' before removal
         ordreList.remove(id); //Removes index (input) from list
     }
     //manageOrder
