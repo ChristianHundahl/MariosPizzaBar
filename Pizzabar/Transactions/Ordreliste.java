@@ -28,6 +28,8 @@ public class Ordreliste {
         Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
 
         */
+        //setOrdre.kundenavn etc. = input fra bruger
+        //Controller tager hele scanner del
         ordreList.add(ordre);
     }
     //Method to remove order from list before completion (sale)
