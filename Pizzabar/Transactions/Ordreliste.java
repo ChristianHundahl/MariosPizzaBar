@@ -15,7 +15,8 @@ public class Ordreliste {
 
     //Tager en ordre som input og tilføjer den til listen
     public void addOrder(Ordre ordre){
-       /* System.out.println("Kundenavn: ");
+       /*
+            System.out.println("Kundenavn: ");
         String kundenavn = in.nextLine();
         System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
         String klokkeslæt = in.nextLine();
@@ -69,7 +70,7 @@ public class Ordreliste {
 class test{
     public static void main(String [] args){
         Ordreliste v1 = new Ordreliste();
-        v1.addOrder();
+        //v1.addOrder();
         v1.showList();
         v1.removeOrder();
     }

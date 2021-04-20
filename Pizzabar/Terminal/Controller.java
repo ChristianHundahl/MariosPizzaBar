@@ -8,6 +8,7 @@ import Transactions.Ordreliste;
 import UI.Menu;
 
 import java.util.Scanner;
+import java.util.SortedMap;
 
 public class Controller {
     Ordreliste ordreliste = new Ordreliste();
@@ -62,7 +63,34 @@ public class Controller {
             switch (choice) {
                 case 1:
                     Ordre ordre = new Ordre();
+                    System.out.println("Kundenavn");
+                    ordre.setKundenavn(input.nextLine());
+                    System.out.println("Tid");
+                    ordre.setAfhentningstidspunkt(input.nextLine());
+                    System.out.println("Kommentar");
+                    ordre.setKommentar(input.nextLine());
+                    ordreLoop(ordre);
+                    System.out.println(ordre);
                     ordreliste.addOrder(ordre);//Tager en ordre og tilføjer den til ordrelisten
+                    break;
+                case 2:
+                    return;
+                default:
+                    break;
+            }
+        }
+    }
+
+    public void ordreLoop(Ordre ordre){
+        int choice = 0;
+        while(true){
+            System.out.println("Hvad skal tilføjes");
+            menukort.sortMenukort();
+            menukort.visMenukort();
+            choice = menu.getMenuChoice();
+            switch (choice){
+                case 1:
+                    ordre.tilføjVare(input.nextInt());
                     break;
                 case 2:
                     return;

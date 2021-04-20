@@ -21,8 +21,13 @@ public class Ordre {
     //Constructor Ordre
     /*
     Empty ordre så kan man ved brug af setter og getters selv andgive attributter
-    pulic Ordre(){}
      */
+    public Ordre(){
+        id = idCounter +1;
+        idCounter++;
+    }
+
+    //Med setters og getters bliver det her lidt overflødigt
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
@@ -67,4 +72,29 @@ public class Ordre {
         }
         return finalOrdre;
     }
+
+    public String getKundenavn() {
+        return kundenavn;
+    }
+
+    public void setKundenavn(String kundenavn) {
+        this.kundenavn = kundenavn;
+    }
+
+    public String getAfhentningstidspunkt() {
+        return afhentningstidspunkt;
+    }
+
+    public void setAfhentningstidspunkt(String afhentningstidspunkt) {
+        this.afhentningstidspunkt = afhentningstidspunkt;
+    }
+
+    public String getKommentar() {
+        return kommentar;
+    }
+
+    public void setKommentar(String kommentar) {
+        this.kommentar = kommentar;
+    }
+
 }

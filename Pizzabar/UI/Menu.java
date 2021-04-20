@@ -32,7 +32,7 @@ public class Menu {
     //Prints new order menu if chosen
     public void newOrder(){
             System.out.println("New order menu");
-            System.out.println("1. Tilføj pizza");
+            System.out.println("1. Tilføj varer");
             System.out.println("2. Gå tilbage main menu");
             System.out.println("Enter choice: ");
     }
