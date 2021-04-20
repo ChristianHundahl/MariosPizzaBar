@@ -7,6 +7,20 @@ import java.util.Scanner;
 public class Ordreliste {
     private ArrayList<Ordre> ordreList = new ArrayList<Ordre>();
     private ArrayList<Ordre> statistik = new ArrayList<Ordre>();
+    //Sort orderList by descending order ID
+
+    public void sortOrdreList() {
+        for (int i = 0; i <ordreList.size(); i++){
+            for (int j = 1; j < ordreList.size(); j++){
+                if (ordreList)
+            }
+        }
+    }
+
+    public void showStatistik(){
+        statistik.toString();
+    }
+
     private Scanner in = new Scanner(System.in);
 
     public void showList(){
@@ -15,22 +29,6 @@ public class Ordreliste {
 
     //Tager en ordre som input og tilføjer den til listen
     public void addOrder(Ordre ordre){
-       /*
-            System.out.println("Kundenavn: ");
-        String kundenavn = in.nextLine();
-        System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
-        String klokkeslæt = in.nextLine();
-        StringBuilder afhentningstidspunkt = new StringBuilder(klokkeslæt);
-        afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkeslæt
-        System.out.println("Kommentar: ");
-        String kommentar = in.nextLine();
-        System.out.println("\nOrdren er tilføjet.");
-
-        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
-
-        */
-        //setOrdre.kundenavn etc. = input fra bruger
-        //Controller tager hele scanner del
         ordreList.add(ordre);
     }
     //Method to remove order from list before completion (sale)
@@ -58,12 +56,6 @@ public class Ordreliste {
     //getOrderList()
     public ArrayList<Ordre> getOrdreList() {
         return ordreList;
-    }
-
-    //showList();
-    public String showOrdreList(){
-        System.out.println(ordreList.toString());
-        return ordreList.toString();
     }
 }
 
