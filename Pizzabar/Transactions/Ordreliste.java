@@ -15,43 +15,22 @@ public class Ordreliste {
 
     //Tager en ordre som input og tilføjer den til listen
     public void addOrder(Ordre ordre){
-       /*
-            System.out.println("Kundenavn: ");
-        String kundenavn = in.nextLine();
-        System.out.println("Afhentningstidspunkt (HHmm) : "); //Bruger inputter 4 tal, der formateres til tid
-        String klokkeslæt = in.nextLine();
-        StringBuilder afhentningstidspunkt = new StringBuilder(klokkeslæt);
-        afhentningstidspunkt.insert(2, ":"); //Bygger 4 tal til klokkeslæt
-        System.out.println("Kommentar: ");
-        String kommentar = in.nextLine();
-        System.out.println("\nOrdren er tilføjet.");
-
-        Ordre tempOrdre = new Ordre(kundenavn, afhentningstidspunkt.toString(), kommentar); //tempOrdre skiftes til nyOrdre?
-
-        */
-        //setOrdre.kundenavn etc. = input fra bruger
-        //Controller tager hele scanner del
         ordreList.add(ordre);
     }
     //Method to remove order from list before completion (sale)
-    public void removeOrder(){
-        System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
-        int id = in.nextInt() - 1;
-        ordreList.remove(id); //Removes index (input) from list
-        System.out.println("Ordre id " + (id + 1) + " er fjernet fra listen");
+    public void removeOrder(int id){
+        ordreList.remove(id-1); //Removes index (input) from list
+        System.out.println("Ordre fjernet");
     }
     //Remove finished ordre from list of active ordres after sale, while saving ordre details for statistical purposes
-    public void ordreAfhentet(){
-        System.out.println("Hvilken ordre er afhentet (ID): ");
-        int id = in.nextInt() - 1;
-        statistik.add(ordreList.get(id)); //Ordre is added to list 'statistik' before removal
-        ordreList.remove(id); //Removes index (input) from list
+    public void ordreAfhentet(int id){
+        statistik.add(ordreList.get(id-1)); //Ordre is added to list 'statistik' before removal
+        ordreList.remove(id-1); //Removes index (input) from list
     }
     //manageOrder
-    public void manageOrdre(){
-        System.out.println("Hvilken ordre skal ændres (ID): ");
-        int id = in.nextInt() - 1;
-        ordreList.get(id);
+    public void manageOrdre(int id){
+        Ordre ordre = ordreList.get(id - 1);
+        System.out.println(ordre.toString());
     }
 
     //ArrayList w/ ordrerlist
@@ -72,6 +51,6 @@ class test{
         Ordreliste v1 = new Ordreliste();
         //v1.addOrder();
         v1.showList();
-        v1.removeOrder();
+       // v1.removeOrder();
     }
 }

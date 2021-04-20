@@ -106,7 +106,18 @@ public class Controller {
         while(true){
             menu.manageOrdre();
             choice = menu.getMenuChoice();
-            ordreliste.manageOrdre();
+            switch (choice){
+                case 1:
+                    ordreliste.removeOrder(input.nextInt());
+                    continue;
+                case 2:
+                    ordreliste.ordreAfhentet(input.nextInt());
+                    continue;
+                case 3:
+                    return;
+                default:
+                    break;
+            }
         }
     }
 
