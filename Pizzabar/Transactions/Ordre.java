@@ -23,11 +23,13 @@ public class Ordre {
     Empty ordre så kan man ved brug af setter og getters selv andgive attributter
      */
     public Ordre(){
+        this.indhold = new ArrayList<Vare>();
         id = idCounter +1;
         idCounter++;
     }
 
     //Med setters og getters bliver det her lidt overflødigt
+    /*
     public Ordre (String kundenavn, String afhentningstidspunkt, String kommentar) {
         this.kundenavn = kundenavn;
         this.afhentningstidspunkt = afhentningstidspunkt;
@@ -35,6 +37,8 @@ public class Ordre {
         id = idCounter +1;
         idCounter++;
     }
+
+     */
 
     public void tilføjVare (int id){
         System.out.println("Tilføj varer til ordren: ");

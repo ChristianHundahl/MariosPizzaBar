@@ -24,7 +24,7 @@ public class Pizza extends Vare {
     }
 
     @Override
-    public String getMenuInfo() {
-        return (super.getMenuInfo() + "; " + getTopping());
+    public String toString() {
+        return (super.toString() + "; " + getTopping());
     }
 }

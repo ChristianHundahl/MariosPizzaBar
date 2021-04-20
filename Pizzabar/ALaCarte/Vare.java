@@ -22,7 +22,7 @@ public class Vare {
         this.pris = pris;
     }
 
-    public String getMenuInfo(){
+    public String toString(){
         return navn;
     }
 

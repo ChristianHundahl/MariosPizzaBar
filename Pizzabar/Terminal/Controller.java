@@ -71,6 +71,8 @@ public class Controller {
                     ordreLoop(ordre);
                     System.out.println(ordre);
                     ordreliste.addOrder(ordre);//Tager en ordre og tilføjer den til ordrelisten
+                    ordreliste.showList();
+                    input.nextLine();
                     break;
                 case 2:
                     return;
@@ -83,12 +85,12 @@ public class Controller {
     public void ordreLoop(Ordre ordre){
         int choice = 0;
         while(true){
-            System.out.println("Hvad skal tilføjes");
             menukort.sortMenukort();
-            menukort.visMenukort();
+            menu.ordreValg();
             choice = menu.getMenuChoice();
             switch (choice){
                 case 1:
+                    menukort.visMenukort();
                     ordre.tilføjVare(input.nextInt());
                     continue;
                 case 2:

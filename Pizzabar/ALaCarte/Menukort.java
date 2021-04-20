@@ -118,7 +118,7 @@ public class Menukort {
         int i = 1;
         System.out.println("Menukort:");
         for (Vare item : menukort){
-            System.out.println( i + " " + item.getMenuInfo() + " - " + item.getPris() + " kr.");
+            System.out.println( i + " " + item.toString() + " - " + item.getPris() + " kr.");
             i++;
         }
     }
