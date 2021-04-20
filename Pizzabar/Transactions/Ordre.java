@@ -66,7 +66,8 @@ public class Ordre {
                 "\n Kunde: " + kundenavn +
                 "\n Afhentning: " + afhentningstidspunkt +
                 "\n Total: " + total +
-                "\n ID: " + id;
+                "\n ID: " + id+
+                "\n Indhold: " + indhold;
         if (kommentar.matches("[a-zA-Z]+")) { //Comment is added if in.nextLine contains characters a to z
             finalOrdre += "\n Kommentar: " + kommentar;
         }

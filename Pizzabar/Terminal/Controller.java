@@ -19,16 +19,15 @@ public class Controller {
 
 
     public Controller() {
-        Pizza p2 = new Pizza("Hawaii",65.00,"Ananas");
-        Pizza p3 = new Pizza("Skinke",65.00,"Skinke");
-        Pizza p4 = new Pizza("Kebab",65.00,"Kebab og løg");
-        Vare v2 = new Vare("Is",18.00);
-        Vare v3 = new Vare("Sodavand 1.5l", 25.00);
+        /*
         menukort.addPizza(p2);
         menukort.addPizza(p3);
         menukort.addPizza(p4);
         menukort.addVare(v2);
         menukort.addVare(v3);
+        menukort.setMenukort(menukort);
+         */
+
     }
 
     public void menuOptions() {
@@ -91,7 +90,7 @@ public class Controller {
             switch (choice){
                 case 1:
                     ordre.tilføjVare(input.nextInt());
-                    break;
+                    continue;
                 case 2:
                     return;
                 default:

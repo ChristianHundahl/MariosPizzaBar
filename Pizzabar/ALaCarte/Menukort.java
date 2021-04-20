@@ -10,7 +10,23 @@ public class Menukort {
     private Scanner in = new Scanner(System.in);
 
     public Menukort (String version){
+
+        kortMenuCon();
         this.version = version;
+    }
+
+
+    public void kortMenuCon(){
+        Pizza p2 = new Pizza("Hawaii",65.00,"Ananas");
+        Pizza p3 = new Pizza("Skinke",65.00,"Skinke");
+        Pizza p4 = new Pizza("Kebab",65.00,"Kebab og løg");
+        Vare v2 = new Vare("Is",18.00);
+        Vare v3 = new Vare("Sodavand 1.5l", 25.00);
+        menukort.add(p2);
+        menukort.add(p3);
+        menukort.add(p4);
+        menukort.add(v2);
+        menukort.add(v3);
     }
 
     //Methods
@@ -109,5 +125,8 @@ public class Menukort {
 
     public ArrayList<Vare> getMenukort() {
         return menukort;
+    }
+    public void setMenukort(ArrayList<Vare> menukort) {
+        this.menukort = menukort;
     }
 }
