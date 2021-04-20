@@ -13,7 +13,7 @@ public class Ordre {
     private String kommentar;
     private double total;
     private int id;
-    private int idCounter;
+    private static int idCounter = 0;
     Scanner in = new Scanner(System.in);
     private Menukort currentMenu = new Menukort("v1");
     private ArrayList<Vare> indhold = new ArrayList<>();
@@ -71,9 +71,9 @@ public class Ordre {
                 "\n Afhentning: " + afhentningstidspunkt +
                 "\n Total: " + total +
                 "\n ID: " + id+
-                "\n Indhold: " + indhold;
+                "\n Indhold: " + indhold +"\n";
         if (kommentar.matches("[a-zA-Z]+")) { //Comment is added if in.nextLine contains characters a to z
-            finalOrdre += "\n Kommentar: " + kommentar;
+            finalOrdre += "\n Kommentar: " + kommentar +"\n";
         }
         return finalOrdre;
     }
