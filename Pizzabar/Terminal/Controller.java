@@ -39,7 +39,7 @@ public class Controller {
                 case 5:
                     System.exit(5);
                 default:
-                    System.exit(6);
+                    break;
             }
         }
     }
