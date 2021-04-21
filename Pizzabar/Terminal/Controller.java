@@ -8,7 +8,7 @@ import Transactions.Ordreliste;
 import UI.Menu;
 
 import java.util.Scanner;
-import java.util.SortedMap;
+
 
 public class Controller {
     Ordreliste ordreliste = new Ordreliste();
@@ -16,18 +16,7 @@ public class Controller {
     Menukort menukort = new Menukort("v1");
     Scanner input = new Scanner(System.in);
 
-
-
     public Controller() {
-        /*
-        menukort.addPizza(p2);
-        menukort.addPizza(p3);
-        menukort.addPizza(p4);
-        menukort.addVare(v2);
-        menukort.addVare(v3);
-        menukort.setMenukort(menukort);
-         */
-
     }
 
     public void menuOptions() {
@@ -47,6 +36,9 @@ public class Controller {
                     manageKortLoop();
                     break;
                 case 4:
+                    ordreliste.showStatistik();
+                    break;
+                case 5:
                     System.exit(4);
                 default:
                     System.exit(5);

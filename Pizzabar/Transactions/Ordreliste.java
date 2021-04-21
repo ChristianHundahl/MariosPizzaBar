@@ -26,7 +26,7 @@ public class Ordreliste {
     }
 
     public void showStatistik(){
-        statistik.toString();
+        System.out.println(statistik.toString());
     }
 
     private Scanner in = new Scanner(System.in);

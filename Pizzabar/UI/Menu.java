@@ -25,7 +25,8 @@ public class Menu {
         System.out.println("1. Lav ny ordre");
         System.out.println("2. Manage ordre");
         System.out.println("3. Redigere menukort");
-        System.out.println("4. Exit program");
+        System.out.println("4. Se statistik");
+        System.out.println("5. Exit program");
         System.out.println("Enter choice: ");
     }
 
