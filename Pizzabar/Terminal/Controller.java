@@ -1,14 +1,11 @@
 package Terminal;
-
 import ALaCarte.Menukort;
 import ALaCarte.Pizza;
 import ALaCarte.Vare;
 import Transactions.Ordre;
 import Transactions.Ordreliste;
 import UI.Menu;
-
 import java.util.Scanner;
-
 
 public class Controller {
     private Ordreliste ordreliste = new Ordreliste();
@@ -187,7 +184,4 @@ public class Controller {
             return;
         }
     }
-
 }
-
-

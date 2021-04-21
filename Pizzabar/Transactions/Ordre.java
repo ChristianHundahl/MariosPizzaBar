@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 public class Ordre {
     //Attributes for class Ordre
-    //TODO index errors
-    //TODO when getting object from Menukort.java use index no.
     private String kundenavn;
     private int afhentningstidspunkt;
     private String kommentar;
@@ -18,10 +16,8 @@ public class Ordre {
     private Menukort currentMenu = new Menukort("v1");
     private ArrayList<Vare> indhold = new ArrayList<>();
 
-    //Constructor Ordre
-    /*
-    Empty ordre så kan man ved brug af setter og getters selv andgive attributter
-     */
+    /*Constructor Ordre
+    Empty Ordre so the user can set attributes*/
     public Ordre(){
         this.indhold = new ArrayList<Vare>();
         id = idCounter +1;
@@ -30,26 +26,7 @@ public class Ordre {
 
     public void tilføjVare (int id){
         System.out.println("Tilføj varer til ordren: ");
-        //this.id = id; Skal ikke ændre ordre ID
         indhold.add(currentMenu.hentVareFraMenukort(id));
-    }
-
-    public void fjernVare () {
-        System.out.println("Hvilken ordre ønskes fjernet? (ID): ");
-        id = in.nextInt();
-        indhold.remove(id - 1); //Removes index (id) from list
-        System.out.println("Ordre id " + id + " er fjernet fra listen");
-    }
-
-    public void udregnTotal(){
-        this.total = 0;
-        for (Vare item : indhold){
-            total += item.getPris();
-        }
-    }
-
-    public double getTotal() {
-        return total;
     }
 
     @Override
@@ -66,6 +43,7 @@ public class Ordre {
         return finalOrdre;
     }
 
+    //Not used, but can be useful if the program is developed further
     public String getKundenavn() {
         return kundenavn;
     }
@@ -82,6 +60,7 @@ public class Ordre {
         this.afhentningstidspunkt = afhentningstidspunkt;
     }
 
+    //Not used, but can be useful if the program is developed further
     public String getKommentar() {
         return kommentar;
     }
@@ -89,7 +68,6 @@ public class Ordre {
     public void setKommentar(String kommentar) {
         this.kommentar = kommentar;
     }
-
 
     public int compareTo (Ordre ordre){
         int res = 0;
