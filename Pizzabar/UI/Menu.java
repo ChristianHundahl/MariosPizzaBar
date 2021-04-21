@@ -22,20 +22,20 @@ public class Menu {
     //Prints main menu
     public void mainMenu(){
         System.out.println("Hovedmenu");
-        System.out.println("1. Lav ny ordre");
-        System.out.println("2. Manage ordre");
+        System.out.println("1. Ny ordre");
+        System.out.println("2. Manage ordrer");
         System.out.println("3. Redigér menukort");
         System.out.println("4. Se statistik");
         System.out.println("5. Exit program");
-        System.out.println("Enter choice: ");
+        System.out.println("Indtast valg: ");
     }
 
     //Prints new order menu if chosen
     public void newOrder(){
         System.out.println("Ny ordre");
         System.out.println("1. Tilføj kundeinformationer");
-        System.out.println("2. Gå tilbage hovedmenu");
-        System.out.println("Vælg: ");
+        System.out.println("2. Annuller");
+        System.out.println("Indtast valg: ");
     }
 
     public void ordreValg(){
@@ -54,14 +54,14 @@ public class Menu {
     }
 
     public void editMenuKort(){
-        System.out.println("Hvordan ønsker du at redigere menukort");
+        System.out.println("Redigér menukort");
         System.out.println("1. Tilføj ny vare til menukort");
-        System.out.println("2. Fjern vare fra menu kort");
+        System.out.println("2. Fjern vare fra menukort");
         System.out.println("3. Gå tilbage");
     }
 
     public void pizzaEllerVare(){
-        System.out.println("Hvad ønsker du at tilføje til menukort");
+        System.out.println("Hvad ønsker du at tilføje til menukortet");
         System.out.println("1. Tilføj pizza til menukort");
         System.out.println("2. Tilføj vare til menukort");
         System.out.println("3. Gå tilbage");
@@ -71,7 +71,7 @@ public class Menu {
     public int getMenuChoice(){
         int choice = 0;
         while(!input.hasNextInt()){
-            System.out.println("\nFejl ved indlæsning");
+            System.out.println("\nFejl ved input");
             System.out.println("Indtast venligst et tal: ");
             input.nextLine();
         }
