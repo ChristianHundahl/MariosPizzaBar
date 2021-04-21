@@ -65,7 +65,7 @@ public class Controller {
                     System.out.println("Kundenavn");
                     ordre.setKundenavn(input.nextLine());
                     System.out.println("Tid");
-                    ordre.setAfhentningstidspunkt(input.nextLine());
+                    ordre.setAfhentningstidspunkt(input.nextInt());
                     System.out.println("Kommentar");
                     ordre.setKommentar(input.nextLine());
                     ordreLoop(ordre);
