@@ -21,7 +21,6 @@ public class Controller {
         while (true) {
             menu.mainMenu();
             choice = menu.getMenuChoice();
-
             switch (choice) {
                 case 1:
                     nyOrdreLoop();
@@ -57,6 +56,7 @@ public class Controller {
                     ordre.setKundenavn(input.nextLine());
                     System.out.println("Tid");
                     ordre.setAfhentningstidspunkt(input.nextInt());
+                    input.nextLine();
                     System.out.println("Kommentar");
                     ordre.setKommentar(input.nextLine());
                     ordreLoop(ordre);
@@ -77,8 +77,8 @@ public class Controller {
         int choice = 0;
         while(true){
             menukort.sortMenukort();
-            menu.ordreValg();
             choice = menu.getMenuChoice();
+            menu.ordreValg();
             switch (choice){
                 case 1:
                     menukort.visMenukort();
@@ -97,7 +97,7 @@ public class Controller {
         while(true){
             menu.manageOrdre();
             choice = menu.getMenuChoice();
-            switch (choice){
+            switch (input.nextInt()){
                 case 1:
                     System.out.println("Vælg en ordre som er afhentet: ");
                     ordreliste.ordreAfhentet(input.nextInt());
@@ -119,7 +119,7 @@ public class Controller {
     public void manageKortLoop(){
         int choice = 0;
         while (true){
-            menu.editMenuCard();
+            menu.editMenuKort();
             choice = menu.getMenuChoice();
             switch (choice){
                 case 1:

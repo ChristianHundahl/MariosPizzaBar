@@ -53,7 +53,7 @@ public class Menu {
         System.out.println("Enter choice: ");
     }
 
-    public void editMenuCard(){
+    public void editMenuKort(){
         System.out.println("Hvordan ønsker du at redigere menukort");
         System.out.println("1. Tilføj ny vare til menukort");
         System.out.println("2. Fjern vare fra menu kort");
