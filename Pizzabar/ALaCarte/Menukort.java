@@ -126,7 +126,4 @@ public class Menukort {
     public ArrayList<Vare> getMenukort() {
         return menukort;
     }
-    public void setMenukort(ArrayList<Vare> menukort) {
-        this.menukort = menukort;
-    }
 }
