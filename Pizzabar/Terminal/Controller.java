@@ -37,9 +37,9 @@ public class Controller {
                     input.nextLine();
                     break;
                 case 5:
-                    System.exit(4);
-                default:
                     System.exit(5);
+                default:
+                    System.exit(6);
             }
         }
     }
