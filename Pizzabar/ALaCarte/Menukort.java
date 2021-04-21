@@ -19,7 +19,7 @@ public class Menukort {
     public void kortMenuCon(){
         Pizza p2 = new Pizza("Hawaii",65.00,"Ananas");
         Pizza p3 = new Pizza("Porco Rosso",65.00,"Skinke");
-        Pizza p4 = new Pizza("Iskander",65.00,"Kebab og løg");
+        Pizza p4 = new Pizza("Istanbul",65.00,"Kebab og løg");
         Vare v2 = new Vare("Cornetto",18.00);
         Vare v3 = new Vare("Coca-Cola 1.5l", 25.00);
         menukort.add(p2);
