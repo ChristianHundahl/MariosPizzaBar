@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 
 public class Controller {
-    Ordreliste ordreliste = new Ordreliste();
-    Menu menu = new Menu(ordreliste);
-    Menukort menukort = new Menukort("v1");
-    Scanner input = new Scanner(System.in);
+    private Ordreliste ordreliste = new Ordreliste();
+    private Menu menu = new Menu(ordreliste);
+    private Menukort menukort = new Menukort("v1");
+    private Scanner input = new Scanner(System.in);
 
     public Controller() {
     }
@@ -63,6 +63,7 @@ public class Controller {
                     ordreLoop(ordre);
                     System.out.println(ordre);
                     ordreliste.addOrder(ordre);//Tager en ordre og tilføjer den til ordrelisten
+                    ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
                     ordreliste.showList();
                     input.nextLine();
                     break;
@@ -101,9 +102,11 @@ public class Controller {
             switch (choice){
                 case 1:
                     ordreliste.removeOrder(input.nextInt());
+                    ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
                     continue;
                 case 2:
                     ordreliste.ordreAfhentet(input.nextInt());
+                    ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
                     continue;
                 case 3:
                     return;

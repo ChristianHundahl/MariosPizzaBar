@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Ordreliste {
     private ArrayList<Ordre> ordreList = new ArrayList<>();
     private ArrayList<Ordre> statistik = new ArrayList<>();
+    private Scanner in = new Scanner(System.in);
     //Sort orderList by descending order ID
 
     public ArrayList<Ordre> sortByAfhentningstidspunkt(ArrayList<Ordre> ordreList){
@@ -28,8 +29,6 @@ public class Ordreliste {
     public void showStatistik(){
         System.out.println(statistik.toString());
     }
-
-    private Scanner in = new Scanner(System.in);
 
     public void showList(){
         System.out.println(ordreList.toString());
