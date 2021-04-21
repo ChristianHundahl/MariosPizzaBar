@@ -48,6 +48,9 @@ public class Menu {
     public void manageOrdre(){
             System.out.println("Vælg en ordre at redigere");
             ordreliste.showList();
+            System.out.println("1. Ordre afhentet");
+            System.out.println("2. Fjern en ordre");
+            System.out.println("3. Gå tilbage");
             System.out.println("Enter choice: ");
     }
 

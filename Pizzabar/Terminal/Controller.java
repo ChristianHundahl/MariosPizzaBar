@@ -37,6 +37,8 @@ public class Controller {
                     break;
                 case 4:
                     ordreliste.showStatistik();
+                    System.out.println("Press enter to return");
+                    input.nextLine();
                     break;
                 case 5:
                     System.exit(4);
@@ -64,7 +66,6 @@ public class Controller {
                     System.out.println(ordre);
                     ordreliste.addOrder(ordre);//Tager en ordre og tilføjer den til ordrelisten
                     ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
-                    ordreliste.showList();
                     input.nextLine();
                     break;
                 case 2:
@@ -101,11 +102,13 @@ public class Controller {
             choice = menu.getMenuChoice();
             switch (choice){
                 case 1:
-                    ordreliste.removeOrder(input.nextInt());
+                    System.out.println("Vælg en ordre som er afhentet: ");
+                    ordreliste.ordreAfhentet(input.nextInt());
                     ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
                     continue;
                 case 2:
-                    ordreliste.ordreAfhentet(input.nextInt());
+                    System.out.println("Vælg en ordre som skal slettes");
+                    ordreliste.removeOrder(input.nextInt());
                     ordreliste.sortByAfhentningstidspunkt(ordreliste.getOrdreList());
                     continue;
                 case 3:
