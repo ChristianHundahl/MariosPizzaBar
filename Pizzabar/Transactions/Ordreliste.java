@@ -1,20 +1,28 @@
 package Transactions;
-import ALaCarte.Menukort;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ordreliste {
-    private ArrayList<Ordre> ordreList = new ArrayList<Ordre>();
-    private ArrayList<Ordre> statistik = new ArrayList<Ordre>();
+    private ArrayList<Ordre> ordreList = new ArrayList<>();
+    private ArrayList<Ordre> statistik = new ArrayList<>();
     //Sort orderList by descending order ID
 
-    public void sortOrdreList() {
-        for (int i = 0; i <ordreList.size(); i++){
-            for (int j = 1; j < ordreList.size(); j++){
-                if (ordreList)
+    public ArrayList<Ordre> sortByAfhentningstidspunkt(ArrayList<Ordre> ordreList){
+        Ordre temp;
+        boolean sorted = false;
+
+        while(!sorted){
+            sorted = true;
+            for (int i = 0; ordreList.size() - 1 > i; i++) {
+                if (ordreList.get(i).compareTo(ordreList.get(i + 1)) > 0) { //afhentningstidspunkt changed to int
+                    temp = ordreList.get(i);
+                    ordreList.set(i, ordreList.get(i + 1));
+                    ordreList.set(i + 1, temp);
+                    sorted = false;
+                }
             }
         }
+        return ordreList;
     }
 
     public void showStatistik(){

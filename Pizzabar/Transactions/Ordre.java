@@ -9,7 +9,7 @@ public class Ordre {
     //TODO index errors
     //TODO when getting object from Menukort.java use index no.
     private String kundenavn;
-    private String afhentningstidspunkt;
+    private int afhentningstidspunkt;
     private String kommentar;
     private double total;
     private int id;
@@ -74,11 +74,11 @@ public class Ordre {
         this.kundenavn = kundenavn;
     }
 
-    public String getAfhentningstidspunkt() {
+    public int getAfhentningstidspunkt() {
         return afhentningstidspunkt;
     }
 
-    public void setAfhentningstidspunkt(String afhentningstidspunkt) {
+    public void setAfhentningstidspunkt(int afhentningstidspunkt) {
         this.afhentningstidspunkt = afhentningstidspunkt;
     }
 
@@ -88,6 +88,18 @@ public class Ordre {
 
     public void setKommentar(String kommentar) {
         this.kommentar = kommentar;
+    }
+
+
+    public int compareTo (Ordre ordre){
+        int res = 0;
+        if (this.afhentningstidspunkt < ordre.getAfhentningstidspunkt()){
+            res =- 1;
+        }
+        if (this.afhentningstidspunkt > ordre.getAfhentningstidspunkt()){
+            res = 1;
+        }
+        return res;
     }
 
 }
