@@ -69,13 +69,16 @@ public class Menu {
 
     //Returns input from user, gonna be used in controller to control menus
     public int getMenuChoice(){
-        int choice = 0;
-        while(!input.hasNextInt()){
+        String strChoice;
+        strChoice = input.nextLine();
+
+        while(!strChoice.matches("[0-9]")) {
             System.out.println("\nFejl ved input");
             System.out.println("Indtast venligst et tal: ");
-            input.nextLine();
+            strChoice = input.nextLine();
         }
-        choice = input.nextInt();
+
+        int choice = Integer.parseInt(strChoice);
         return choice;
     }
 }
